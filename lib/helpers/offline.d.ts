@@ -4,7 +4,7 @@ export declare enum CacheOperationTypes {
     AUTO = "auto",
     ADD = "add",
     REMOVE = "remove",
-    UPDATE = "update"
+    UPDATE = "update",
 }
 export declare type QueryWithVariables = {
     query: DocumentNode;
@@ -24,7 +24,9 @@ export declare type CacheUpdatesOptions = (variables?: object) => CacheUpdatesDe
  * @param idField
  * @param operationType
  */
-declare const buildSubscription: (subscriptionQuery: CacheUpdateQuery, cacheUpdateQuery: CacheUpdateQuery, idField?: string, operationType?: CacheOperationTypes) => SubscribeToMoreOptions<any, import("apollo-client/core/types").OperationVariables>;
+declare const buildSubscription: (subscriptionQuery: CacheUpdateQuery, cacheUpdateQuery: CacheUpdateQuery, idField?: string, operationType?: CacheOperationTypes) => SubscribeToMoreOptions<any, {
+    [key: string]: any;
+}>;
 /**
  * Builds a MutationOptions object ready to be used by the ApolloClient to automatically update the cache according to the cacheUpdateQuery
  * parameter
@@ -41,5 +43,7 @@ declare const buildSubscription: (subscriptionQuery: CacheUpdateQuery, cacheUpda
  */
 declare const buildMutation: (client: ApolloClient<any>, mutation: DocumentNode, variables: object, cacheUpdateQuery: CacheUpdatesOptions, typename: string, idField?: string, operationType?: CacheOperationTypes) => MutationOptions<{
     [key: string]: any;
-}, import("apollo-client/core/types").OperationVariables>;
+}, {
+    [key: string]: any;
+}>;
 export { buildSubscription, buildMutation };

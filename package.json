@@ -1,7 +1,14 @@
 {
-  "_from": "aws-appsync@git+https://github.com/yarax/aws-appsync.git#7074be861dc3b7fc9f41934ab0d36c5fcd1b0aaf",
+  "_args": [
+    [
+      "aws-appsync@1.3.3",
+      "/home/roman/cocomore/sanacorp/rxapp-frontend"
+    ]
+  ],
+  "_from": "aws-appsync@1.3.3",
   "_id": "aws-appsync@1.3.3",
   "_inBundle": false,
+  "_integrity": "sha512-08ITebVn7dnEjCD6qzoekhZTfLZSodAh8VPhCUxBFVqSEXWm7XOYHrCKaKh2XePFp9a8GVambLhEPvl1DkA+wg==",
   "_location": "/aws-appsync",
   "_phantomChildren": {
     "apollo-link": "1.2.2",
@@ -9,20 +16,20 @@
     "fast-json-stable-stringify": "2.0.0"
   },
   "_requested": {
-    "type": "git",
-    "raw": "aws-appsync@git+https://github.com/yarax/aws-appsync.git#7074be861dc3b7fc9f41934ab0d36c5fcd1b0aaf",
+    "type": "version",
+    "registry": true,
+    "raw": "aws-appsync@1.3.3",
     "name": "aws-appsync",
     "escapedName": "aws-appsync",
-    "rawSpec": "git+https://github.com/yarax/aws-appsync.git#7074be861dc3b7fc9f41934ab0d36c5fcd1b0aaf",
-    "saveSpec": "git+https://github.com/yarax/aws-appsync.git#7074be861dc3b7fc9f41934ab0d36c5fcd1b0aaf",
-    "fetchSpec": "https://github.com/yarax/aws-appsync.git",
-    "gitCommittish": "7074be861dc3b7fc9f41934ab0d36c5fcd1b0aaf"
+    "rawSpec": "1.3.3",
+    "saveSpec": null,
+    "fetchSpec": "1.3.3"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "git+https://github.com/yarax/aws-appsync.git#7074be861dc3b7fc9f41934ab0d36c5fcd1b0aaf",
-  "_spec": "aws-appsync@git+https://github.com/yarax/aws-appsync.git#7074be861dc3b7fc9f41934ab0d36c5fcd1b0aaf",
+  "_resolved": "https://registry.npmjs.org/aws-appsync/-/aws-appsync-1.3.3.tgz",
+  "_spec": "1.3.3",
   "_where": "/home/roman/cocomore/sanacorp/rxapp-frontend",
   "author": {
     "name": "Amazon Web Services",
@@ -31,7 +38,6 @@
   "bugs": {
     "url": "https://github.com/awslabs/aws-mobile-appsync-sdk-js/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "@redux-offline/redux-offline": "^2.2.1",
     "apollo-cache-inmemory": "^1.0.0",
@@ -47,7 +53,6 @@
     "url": "^0.11.0",
     "uuid": "3.x"
   },
-  "deprecated": false,
   "description": "AWS Mobile AppSync SDK for JavaScript",
   "devDependencies": {
     "@types/graphql": "0.12.4",
@@ -83,6 +88,7 @@
     "url": "git+https://github.com/awslabs/aws-mobile-appsync-sdk-js.git"
   },
   "scripts": {
+    "prepare": "tsc && cp -r src/vendor lib/vendor",
     "test": "jest --coverage --coverageReporters=text",
     "test-watch": "jest --watch"
   },
